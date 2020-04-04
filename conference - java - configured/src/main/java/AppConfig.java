@@ -19,7 +19,8 @@ public class AppConfig {
     //5. Global
 
     @Bean(name = "speakerService")
-    @Scope(value = BeanDefinition.SCOPE_SINGLETON)
+//    @Scope(value = BeanDefinition.SCOPE_SINGLETON)
+    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     public SpeakerService getSpeakerService(){
 
         //Constructor Injection
