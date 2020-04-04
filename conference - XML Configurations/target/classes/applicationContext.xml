@@ -9,8 +9,9 @@
     </bean>
 
     <bean name="speakerService"
-          class="com.pulkit.service.SpeakerServiceImpl">
-        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>
+          class="com.pulkit.service.SpeakerServiceImpl"
+          autowire="constructor">
+<!--        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>-->
     </bean>
 
 </beans>
