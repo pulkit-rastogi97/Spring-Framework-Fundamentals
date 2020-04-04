@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="conference" />
+        <module name="conference - java - configured" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="conference" target="11" />
+      <module name="conference - java - configured" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
