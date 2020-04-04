@@ -15,6 +15,14 @@ public class SpeakerServiceImpl implements SpeakerService {
         return speakerRepository.findAll();
     }
 
+    public SpeakerServiceImpl(){
+
+    }
+
+    public  SpeakerServiceImpl(SpeakerRepository speakerRepository){
+        this.speakerRepository = speakerRepository;
+    }
+
     public void setSpeakerRepository(SpeakerRepository repository) {
         this.speakerRepository = repository;
     }
