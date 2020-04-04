@@ -10,10 +10,12 @@ public class AppConfig {
 
     @Bean(name = "speakerService")
     public SpeakerService getSpeakerService(){
-        SpeakerServiceImpl service = new SpeakerServiceImpl();
+
+        //Constructor Injection
+        SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
 
         //Setter Injection
-        service.setRepository(getSpeakerRepository());
+        //service.setRepository(getSpeakerRepository());
         return service;
     }
 
