@@ -11,7 +11,7 @@
     <bean name="speakerService"
           class="com.pulkit.service.SpeakerServiceImpl"
 
-              autowire="byType">
+              autowire="byName">
         <!--          autowire="constructor">-->
 <!--        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>-->
     </bean>
