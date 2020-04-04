@@ -10,7 +10,9 @@
 
     <bean name="speakerService"
           class="com.pulkit.service.SpeakerServiceImpl"
-          autowire="constructor">
+
+              autowire="byType">
+        <!--          autowire="constructor">-->
 <!--        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>-->
     </bean>
 
