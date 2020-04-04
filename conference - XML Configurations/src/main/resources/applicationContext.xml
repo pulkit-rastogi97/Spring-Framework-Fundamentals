@@ -8,10 +8,12 @@
           class="com.pulkit.repository.HibernateSpeakerRepositoryImpl">
     </bean>
 
+<!--     For this name should be same of the variable as in class name of repository class-->
     <bean name="speakerService"
           class="com.pulkit.service.SpeakerServiceImpl"
 
               autowire="byName">
+
         <!--          autowire="constructor">-->
 <!--        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>-->
     </bean>
