@@ -3,6 +3,7 @@ package com.pulkit.repository;
 import com.pulkit.model.Speaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import java.net.StandardSocketOptions;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Repository("speakerRepository")
 //Scope can be defined at bean level
+@Profile("dev")
 public class HibernateSpeakerRepositoryImpl implements  SpeakerRepository{
 
     @Autowired

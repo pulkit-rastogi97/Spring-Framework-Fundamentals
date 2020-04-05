@@ -5,6 +5,7 @@ import com.pulkit.repository.HibernateSpeakerRepositoryImpl;
 import com.pulkit.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Service("speakerService") // Stereo Type annotation
 //Scope can be defined at bean level
+@Profile("dev")
 public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository;
