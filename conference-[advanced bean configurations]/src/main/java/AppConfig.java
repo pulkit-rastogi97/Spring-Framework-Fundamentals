@@ -2,11 +2,15 @@ import com.pulkit.repository.HibernateSpeakerRepositoryImpl;
 import com.pulkit.repository.SpeakerRepository;
 import com.pulkit.service.SpeakerService;
 import com.pulkit.service.SpeakerServiceImpl;
+import com.pulkit.util.CalenderFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+
+import java.util.Calendar;
+import java.util.concurrent.ExecutionException;
 
 @Configuration
 //For fully autowiring : we use stereotype annotations
@@ -25,6 +29,21 @@ public class AppConfig {
     //5. Global
         //Uniques object per application, as from the time of deployement to reboot or undeployement
 
+
+    /**
+     * For this project
+     */
+    @Bean(name = "cal")
+    public CalenderFactory calenderFactory(){
+        CalenderFactory calenderFactory = new CalenderFactory();
+        calenderFactory.addDays(2);
+        return calenderFactory;
+    }
+
+    @Bean
+    public Calendar calendar() throws Exception{
+        return calenderFactory().getObject();
+    }
 
     /**
      *  THIS IS BEING Commented TO TRY STEREOTYPE ANNOTATIONS
